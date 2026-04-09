@@ -33,22 +33,34 @@
         <p>Verifique o canto inferior da tela.</p>
     </div>
 
-    <script>
-      (function (o, c) {
-        o.octadesk = o.octadesk || {};
-        o.octadesk.chatOptions = {
-          subDomain: 'o212205-f76',
-          showButton: 'true',
-          openOnMessage: 'true',
-          showFooterPoweredBy: 'true',
-          hide: 'false'
-        };
-        var bd = c.getElementsByTagName("body")[0];
-        var sc = c.createElement("script");
-        sc.async = 1;
-        sc.src = 'https://cdn.octadesk.com/embed.js';
-        bd.appendChild(sc);
-      })(window, document);
-    </script>
+    
+  <script>
+    (function (o, c) {
+      o.octadesk = o.octadesk || {};
+      o.octadesk.chatOptions = {
+        subDomain: 'o212205-f76',
+        showButton: 'true',
+        openOnMessage: 'true',
+        showFooterPoweredBy: 'true',
+        hide: 'false',
+        login: {
+          name: user.name, // Informe aqui o nome do seu usuário
+          email: user.email, // Informe aqui o e-mail do seu usuário,
+          customFields: [ // Você pode informar campos de pessoas para os usuários que estão logados no seu site
+            {
+              id: 'field-id', // Informe aqui o id do campo personalizado
+              value: 'field-value', // Informe aqui o valor do campo personalizado
+              domainType: 2, // Informe aqui o tipo de domínio do campo personalizado
+            }
+          ]
+        }
+      };
+      var bd = c.getElementsByTagName("body")[0];
+      var sc = c.createElement("script");
+      sc.async = 1;
+      sc.src = 'https://cdn.octadesk.com/embed.js';
+      bd.appendChild(sc);
+    })(window, document);
+  </script>
     </body>
 </html>
